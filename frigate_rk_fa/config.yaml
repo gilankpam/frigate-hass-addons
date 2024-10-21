@@ -43,6 +43,18 @@ video: true
 full_access: true
 privileged:
   - PERFMON
+  - BPF
+  - DAC_READ_SEARCH
+  - IPC_LOCK
+  - NET_ADMIN
+  - NET_RAW
+  - SYS_ADMIN
+  - SYS_MODULE
+  - SYS_NICE
+  - SYS_PTRACE
+  - SYS_RAWIO
+  - SYS_RESOURCE
+  - SYS_TIME
 environment:
   CONFIG_FILE: /config/frigate.yml
 schema:
