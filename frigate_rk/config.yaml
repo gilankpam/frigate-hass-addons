@@ -40,21 +40,9 @@ host_network: false
 tmpfs: true
 usb: true
 video: true
-full_access: true
+full_access: false
 privileged:
   - PERFMON
-  - BPF
-  - DAC_READ_SEARCH
-  - IPC_LOCK
-  - NET_ADMIN
-  - NET_RAW
-  - SYS_ADMIN
-  - SYS_MODULE
-  - SYS_NICE
-  - SYS_PTRACE
-  - SYS_RAWIO
-  - SYS_RESOURCE
-  - SYS_TIME
 environment:
   CONFIG_FILE: /config/frigate.yml
 schema:
@@ -67,3 +55,10 @@ arch:
 map:
   - "media:rw"
   - "config:rw"
+apparmor: false
+devicetree: true
+devices:
+  - /dev/dri
+  - /dev/dma_heap
+  - /dev/rga
+  - /dev/mpp_service
